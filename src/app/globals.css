@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --bg-surface: #050507;
+  --bg-card: rgba(255, 255, 255, 0.015);
+  
+  --text-primary: #ffffff;
+  --text-secondary: #f5f5f7;
+  --text-gray: #86868b;
+  --text-muted: #48484a;
+  
+  --border-premium-color: rgba(255, 255, 255, 0.04);
+  --border-premium-hover-color: rgba(255, 255, 255, 0.12);
+  
+  --bg-glass-panel: rgba(255, 255, 255, 0.015);
+  --bg-glass-nav: rgba(10, 10, 12, 0.6);
+  --grid-line-color: rgba(255, 255, 255, 0.01);
+  --card-shadow: rgba(0, 0, 0, 0.5);
+
+  --accent-cyan: #00f2fe;
+  --accent-magenta: #f02fc2;
+  --accent-purple: #7928ca;
+
+  --card-gradient-from: #120718;
+  --card-gradient-to: #000000;
+  --card-gradient-ford-from: #0c0d10;
+  --card-gradient-ford-to: #000000;
+}
+
+:root.light {
+  --background: #fafafc;
+  --bg-surface: #f4f4f7;
+  --bg-card: #ffffff;
+  
+  --text-primary: #121215;
+  --text-secondary: #27272a;
+  --text-gray: #52525b;
+  --text-muted: #8b8b93;
+  
+  --border-premium-color: rgba(18, 18, 21, 0.06);
+  --border-premium-hover-color: rgba(18, 18, 21, 0.12);
+  
+  --bg-glass-panel: rgba(255, 255, 255, 0.7);
+  --bg-glass-nav: rgba(250, 250, 252, 0.85);
+  --grid-line-color: rgba(18, 18, 21, 0.03);
+  --card-shadow: rgba(0, 0, 0, 0.04);
+
+  --accent-cyan: #0284c7; /* Lindo azul-celeste de alto contraste para projetores */
+  --accent-magenta: #db2777; /* Rosa magenta premium e legível à distância */
+  --accent-purple: #6b21a8; /* Roxo fechado e sofisticado */
+
+  --card-gradient-from: #ffffff;
+  --card-gradient-to: #f4f4f7;
+  --card-gradient-ford-from: #ffffff;
+  --card-gradient-ford-to: #f4f4f7;
+}
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-title: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --color-black: var(--background);
+  --color-white: var(--text-primary);
+  
+  --color-bg-absolute: var(--background);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-card: var(--bg-card);
+  
+  --color-text-white: var(--text-primary);
+  --color-text-silver: var(--text-secondary);
+  --color-text-gray: var(--text-gray);
+  --color-text-muted: var(--text-muted);
+  
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-magenta: var(--accent-magenta);
+  --color-accent-purple: var(--accent-purple);
+
+  --color-card-gradient-from: var(--card-gradient-from);
+  --color-card-gradient-to: var(--card-gradient-to);
+  --color-card-gradient-ford-from: var(--card-gradient-ford-from);
+  --color-card-gradient-ford-to: var(--card-gradient-ford-to);
+  
+  --border-premium: 1px solid var(--border-premium-color);
+  --border-premium-hover: 1px solid var(--border-premium-hover-color);
+  
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-fast: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   GLOBAL RESET & STRUCTURES
+   ========================================================================== */
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg-absolute);
+  color: var(--color-text-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Otimização global de tipografia para projetor fabril de auditório */
+body {
+  font-size: 17px; /* Aumentado de 15px para melhor legibilidade no projetor */
+  line-height: 1.7;
+}
+
+/* Transições de tema fluidas aplicadas de forma abrangente e segura */
+body, section, div, header, nav, button, h1, h2, h3, h4, h5, h6, p, span, a, svg, kbd, table, th, td {
+  transition: color 400ms cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 400ms cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 400ms cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-absolute);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+.light ::-webkit-scrollbar-thumb {
+  background: rgba(18, 18, 21, 0.12);
+}
+
+/* ==========================================================================
+   PREMIUM GLASS & LIGHTING UTILITIES
+   ========================================================================== */
+.glass-panel {
+  background: var(--bg-glass-panel);
+  border: 1px solid var(--border-premium-color);
+  backdrop-filter: blur(24px);
+  border-radius: 28px; /* Aumentado cantos arredondados */
+  box-shadow: 0 20px 40px var(--card-shadow);
+}
+
+.glass-nav {
+  background: var(--bg-glass-nav);
+  border: 1px solid var(--border-premium-color);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 30px 60px var(--card-shadow);
+}
+
+/* Stripe Spotlight glow card overlay */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(400px circle at var(--mouse-x, -999px) var(--mouse-y, -999px), rgba(255, 255, 255, 0.06), transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+}
+.light .spotlight-glow {
+  background: radial-gradient(400px circle at var(--mouse-x, -999px) var(--mouse-y, -999px), rgba(0, 0, 0, 0.025), transparent 45%);
+}
+
+/* Background lines grid pattern */
+.grid-lines-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 50px 50px; /* Aumentado grid elástico */
+  background-image: linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ambient dynamic backlights */
+.ambient-glow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% -10%, rgba(121, 40, 202, 0.05) 0%, transparent 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+.light .ambient-glow-bg {
+  background: radial-gradient(circle at 50% -10%, rgba(121, 40, 202, 0.02) 0%, transparent 60%);
+}
+
+/* ==========================================================================
+   PREFERS REDUCED MOTION (Strict Accessibility Rule)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
