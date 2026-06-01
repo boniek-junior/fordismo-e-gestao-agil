@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fordismo & Gestão Ágil — Experiência Interativa
 
-## Getting Started
+Uma experiência web interativa desenvolvida para apresentar, de forma visual e acessível, os conceitos de Fordismo e Gestão Ágil. O projeto utiliza storytelling digital, animações, comparações visuais e elementos interativos para transformar temas de administração em uma apresentação envolvente e fácil de compreender.
 
-First, run the development server:
+## Objetivo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Demonstrar como os modelos de gestão evoluíram ao longo do tempo, destacando:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* O que é Fordismo
+* Como funciona a produção em massa
+* Vantagens e desvantagens do Fordismo
+* O que é Gestão Ágil
+* Como equipes ágeis trabalham
+* Principais diferenças entre os dois modelos
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Todo o conteúdo foi adaptado para um público leigo, utilizando linguagem simples, recursos visuais e exemplos intuitivos.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Principais Recursos
 
-## Learn More
+* Experiência de navegação baseada em storytelling
+* Linha do tempo simplificada
+* Simulação animada de uma linha de montagem fordista
+* Comparação visual entre Fordismo e Gestão Ágil
+* Sistema de tema claro e escuro
+* Quiz interativo para fixação do conteúdo
+* Layout otimizado para apresentações em projetores e telões
+* Design responsivo para desktop, tablet e dispositivos móveis
+* Animações suaves utilizando Framer Motion
 
-To learn more about Next.js, take a look at the following resources:
+## Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* Lucide Icons
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Público-Alvo
 
-## Deploy on Vercel
+Este projeto foi desenvolvido para apresentações acadêmicas, palestras e atividades educacionais, permitindo que qualquer pessoa compreenda os conceitos de Fordismo e Gestão Ágil mesmo sem conhecimento prévio sobre administração ou gestão.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Diferencial
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ao invés de utilizar slides tradicionais, este projeto transforma a apresentação em uma experiência digital moderna e interativa, tornando o aprendizado mais visual, intuitivo e memorável.
